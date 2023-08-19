@@ -1,0 +1,172 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "74c98243",
+   "metadata": {},
+   "source": [
+    "# Write a program to create \"intro.txt\" file.  Print only even number of row."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "47c567ee",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import csv"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "id": "c96c2ef4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=open('intro.txt','w',newline=\"\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "750c2f7b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " k=csv.writer(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "10e397eb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l=[['my name is ansh'],['i am 18 year old'],['I live in chalthan'],\n",
+    "   ['my name is ayuh'],[ 'I am live in bardoli'],['i am in collage'],\n",
+    "  ['i am bca student'],['i am belong to up']]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "60ff849c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['my name is ansh'], ['i am 18 year old'], ['I live in chalthan'], ['my name is ayuh'], ['I am live in bardoli'], ['i am in collage'], ['i am bca student'], ['i am belong to up']]\n"
+     ]
+    }
+   ],
+   "source": [
+    "k.writerows(l)\n",
+    "print(l)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "2d665e8c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a.close()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "6ad45fa4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "k=open('intro.txt','r',encoding='utf-8',newline=\"\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "d4d98682",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# j=csv.reader(k)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "e9abbdf4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "inside if\n",
+      "['my name is ansh']\n",
+      "inside if\n",
+      "['I live in chalthan']\n",
+      "inside if\n",
+      "['I am live in bardoli']\n",
+      "inside if\n",
+      "['i am bca student']\n"
+     ]
+    }
+   ],
+   "source": [
+    "j=csv.reader(k)\n",
+    "row=0\n",
+    "for l in j:\n",
+    "#     print(l)\n",
+    "    if row==0 or row%2==0:\n",
+    "        print(\"inside if\")\n",
+    "        print(l)\n",
+    "    row=row+1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ffd3f0ee",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1c4a760c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
